@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+:root {
+  --w: 260px;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(67, 117, 134);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(89, 156, 178);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #1e1e1e;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 50px;
+}
+
+.wrapper__top {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.wrapper__list {
+  width: 260px;
+  height: 100%;
+  overflow: auto;
+  padding: 5px 5px;
+  background-color: #1a1a1a;
+}
+
+.wrapper__content {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  font-size: 1.2rem;
+  white-space: pre;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.wrapper__content > img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.open_file {
+  width: 90%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: hsl(0, 0%, 18%);
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hljs-tag .hljs-attr,
+.hljs-tag .hljs-name {
+  color: #f2f2f2;
+}
+
+.hljs-attribute,
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-title {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none; /* 去掉默认的列表样式 */
+  padding-left: 20px; /* 增加缩进，区分层级 */
+  margin: 0; /* 去掉默认的外边距 */
+}
+
+li {
+  padding: 5px 0; /* 增加上下间距，使得项目之间有间隔 */
+  position: relative; /* 设置相对定位，以便添加自定义的层级指示符 */
+  font-family: Montserrat, "Signika Negative", sans-serif;
+}
+
+li::before {
+  content: ""; /* 伪元素，用于自定义列表样式 */
+  position: absolute;
+  left: -16px; /* 伪元素的位置 */
+  top: 10px; /* 伪元素的垂直位置 */
+  width: 10px; /* 伪元素的宽度 */
+  height: 10px; /* 伪元素的高度 */
+  background-color: #007bff; /* 使用蓝色圆点表示文件 */
+  border-radius: 50%; /* 圆形 */
+}
+
+li ul li::before {
+  background-color: #28a745; /* 使用绿色圆点表示子文件或子文件夹 */
+}
+
+ul ul ul li::before {
+  background-color: #ffc107; /* 使用黄色圆点表示更深层级的文件 */
+}
+
+li ul {
+  border-left: 2px dashed #007bff; /* 添加虚线以可视化层级 */
+  margin-left: 10px; /* 子级的进一步缩进 */
+  padding-left: 10px; /* 子级的进一步缩进 */
+}
+
+li ul ul {
+  border-left: 2px dashed #28a745; /* 子级文件夹的虚线颜色 */
+}
+
+li ul ul ul {
+  border-left: 2px dashed #ffc107; /* 更深层级的虚线颜色 */
+}
+
+li[data-path] {
+  cursor: pointer;
+}
+
+li.active {
+  color: #3ff23f;
+}
+
+li.active::before {
+  background-color: #3ff23f; /* 活动项的伪元素颜色 */
+}
+
+.monaco-editor,
+.monaco-editor-background,
+.monaco-editor .margin {
+  background-color: #1e1e1e !important;
+}
+
+.wrapper__top_ex,
+.wrapper__top_preview, .wrapper__top_home {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.wrapper__top_ex:hover,
+.wrapper__top_preview:hover, .wrapper__top_home:hover {
+  background-color: #2f2f2f;
+  transition: 0.5s;
+}
+
+.wrapper__top_preview {
+  margin-left: 5px;
+}
+
+.wrapper__top_home {
+  margin-right: 5px;
+}
+
+.wrapper__top_preview svg, .wrapper__top_home svg {
+  width: 24px;
+  height: 24px;
+}
+
+.isshow {
+  display: none;
+}
