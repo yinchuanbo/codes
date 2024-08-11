@@ -1,6 +1,7 @@
 const fs = require("fs");
 const ejs = require("ejs");
 const path = require("path");
+const marked = require("marked");
 
 const directoryPath = __dirname;
 
@@ -63,11 +64,14 @@ function getDirectoryStructure(dirPath) {
         }
       } else {
         const fileContent = fs.readFileSync(itemPath, "utf-8");
-        result[item] = fileContent;
+        if (itemPath.includes(".md")) {
+          result[item] = marked.parse(fileContent);
+        } else {
+          result[item] = fileContent;
+        }
       }
     }
   });
-
   return result;
 }
 

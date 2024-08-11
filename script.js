@@ -32,33 +32,40 @@ function decodeHtmlEntities(encodedString) {
 }
 
 function init(obj, extension) {
+  console.log("extension", extension);
   obj = decodeHtmlEntities(obj);
   if (editor) editor.dispose();
   wrapperContent.innerHTML = "";
-  require.config({
-    paths: {
-      vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs",
-    },
-  });
-  require(["vs/editor/editor.main"], function () {
-    editor = monaco.editor.create(wrapperContent, {
-      value: obj,
-      language: extension === "js" ? "javascript" : extension,
-      automaticLayout: true,
-      theme: "hc-black",
-      fontSize: 18,
-      fontFamily: "hack, Fira Code, SF Mono",
-      scrollbar: {
-        vertical: "hidden",
-        horizontal: "hidden",
+  wrapperContent.classList.remove('mdClass')
+  if (extension === "md") {
+    wrapperContent.innerHTML = obj;
+    wrapperContent.classList.add('mdClass')
+  } else {
+    require.config({
+      paths: {
+        vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs",
       },
-      lineNumbers: true,
-      lineHeight: 40,
-      // minimap: {
-      //   enabled: false, // 禁用缩略图
-      // }
     });
-  });
+    require(["vs/editor/editor.main"], function () {
+      editor = monaco.editor.create(wrapperContent, {
+        value: obj,
+        language: extension === "js" ? "javascript" : extension,
+        automaticLayout: true,
+        theme: "hc-black",
+        fontSize: 18,
+        fontFamily: "hack, Fira Code, SF Mono",
+        scrollbar: {
+          vertical: "hidden",
+          horizontal: "hidden",
+        },
+        lineNumbers: true,
+        lineHeight: 40,
+        // minimap: {
+        //   enabled: false, // 禁用缩略图
+        // }
+      });
+    });
+  }
 }
 
 window.onload = () => {
@@ -106,6 +113,6 @@ window.onload = () => {
     };
   });
   topEx.onclick = () => {
-    wrapperList.classList.toggle('isshow')
-  }
+    wrapperList.classList.toggle("isshow");
+  };
 };

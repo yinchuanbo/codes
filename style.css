@@ -111,14 +111,14 @@ body {
 }
 
 /* 1 */
-ul {
+.wrapper__list ul {
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", "Signika Negative", sans-serif;
 }
 
-li {
+.wrapper__list li {
   position: relative;
   padding: 12px;
   /* margin: 5px 0; */
@@ -131,7 +131,7 @@ li {
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-li::before {
+.wrapper__list li::before {
   content: "";
   position: absolute;
   left: -20px;
@@ -142,47 +142,207 @@ li::before {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-li ul li::before {
+.wrapper__list li ul li::before {
   background: #28a745; /* 绿色圆点 */
 }
 
-ul ul ul li::before {
+.wrapper__list ul ul ul li::before {
   background: #ffc107; /* 黄色圆点 */
 }
 
-li ul {
+.wrapper__list li ul {
   border-left: 3px solid #007bff; /* 蓝色虚线 */
   margin-left: 20px;
   padding-left: 20px;
 }
 
-li ul ul {
+.wrapper__list li ul ul {
   border-left: 3px solid #28a745; /* 绿色虚线 */
 }
 
-li ul ul ul {
+.wrapper__list li ul ul ul {
   border-left: 3px solid #ffc107; /* 黄色虚线 */
 }
 
-li:hover::before {
+.wrapper__list li:hover::before {
   background: #fff; /* 悬停时圆点变为白色 */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 强化圆点阴影 */
 }
 
-li[data-path] {
+.wrapper__list li[data-path] {
   cursor: pointer;
 }
 
-li.active {
+.wrapper__list li.active {
   background: #343a40;
   color: #3ff23f;
 }
 
-li.active::before {
+.wrapper__list li.active::before {
   background: #3ff23f; /* 活动项圆点颜色为绿色 */
 }
 
 /* 2 */
+.wrapper__content h2 {
+  font-size: 22px;
+}
+
+.wrapper__content h3 {
+  font-size: 20px;
+}
+
+.wrapper__content h4 {
+  font-size: 18px;
+}
+.wrapper__content p {
+  line-height: 2;
+}
+
+.wrapper__content > * {
+  margin-bottom: 20px !important;
+}
+
+.wrapper__content p {
+  letter-spacing: 1px;
+}
+
+.wrapper__content code[class*="language-"] {
+  background: initial;
+  box-shadow: initial;
+  font-family: var(--ff);
+  font-size: var(--fs01);
+  font-style: italic;
+  line-height: 2;
+}
+
+.wrapper__content pre[class*="language-"] {
+  background: initial;
+  margin: 0;
+}
+
+.wrapper__content strong {
+  color: #3ff23f;
+}
+.wrapper__content img {
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper__content blockquote {
+  position: relative;
+  padding: 5px 0;
+}
+
+.wrapper__content blockquote p {
+  font-style: italic;
+}
+
+.wrapper__content blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.wrapper__content a:not(.token) {
+  color: #fff;
+  /* text-decoration: none; */
+  position: relative;
+  transition: 0.5s;
+}
+
+.wrapper__content a:not(.token):hover {
+  color: #00f;
+  transition: 0.5s;
+}
+
+.wrapper__content a:not(.token):hover::before {
+  content: none;
+}
+.wrapper__content p code,
+.wrapper__content li code {
+  color: #3ff23f;
+  font-style: italic;
+  padding: 0 5px;
+}
+.wrapper__content code[class*="language-"] a[href],
+.wrapper__content pre[class*="language-"] a[href] {
+  color: #fff;
+  pointer-events: none;
+}
+.wrapper__content table {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -50px 36px -28px inset;
+}
+
+.wrapper__content table thead tr {
+  border-bottom: 1px solid #fff;
+  height: 50px;
+}
+
+.wrapper__content table thead tr th {
+  text-align: center;
+}
+
+.wrapper__content table tbody tr td {
+  text-align: center;
+  padding: 10px;
+  /* border-bottom: 1px solid #fff; */
+  line-height: 1.5;
+}
+
+.wrapper__content table tbody tr {
+  border-bottom: 1px solid #fff;
+}
+
+.wrapper__content ul > li {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  line-height: 2;
+}
+
+.wrapper__content ol {
+  list-style: decimal;
+}
+
+.wrapper__content ol > li {
+  margin-left: 33px;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+.wrapper__content ol > li::marker {
+  color: #fff;
+  float: left;
+  font-weight: 600;
+}
+
+.wrapper__content ul > li::before {
+  content: "";
+  position: absolute;
+  top: 12.5px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.mdClass {
+  padding: 20px;
+  white-space: normal;
+}
+
+.mdClass > * {
+  font-size: 0.95em;
+  font-family: "Montserrat", "Signika Negative", sans-serif;
+}
+/* 3 */
 
 .monaco-editor,
 .monaco-editor-background,
