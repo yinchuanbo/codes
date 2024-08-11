@@ -46,17 +46,17 @@ function init(obj, extension) {
       language: extension === "js" ? "javascript" : extension,
       automaticLayout: true,
       theme: "hc-black",
-      fontSize: 17,
+      fontSize: 18,
       fontFamily: "hack, Fira Code, SF Mono",
       scrollbar: {
         vertical: "hidden",
         horizontal: "hidden",
       },
       lineNumbers: true,
-      lineHeight: 30,
-      minimap: {
-        enabled: false, // 禁用缩略图
-      }
+      lineHeight: 40,
+      // minimap: {
+      //   enabled: false, // 禁用缩略图
+      // }
     });
   });
 }

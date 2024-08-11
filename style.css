@@ -12,8 +12,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 13px;
-  height: 13px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,10 +22,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgb(67, 117, 134);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(89, 156, 178);
 }
 
 html,
@@ -57,7 +53,7 @@ body {
 }
 
 .wrapper__list {
-  width: 260px;
+  width: fit-width;
   height: 100%;
   overflow: auto;
   padding: 5px 5px;
@@ -113,49 +109,63 @@ body {
   font-weight: normal;
 }
 
+/* 1 */
 ul {
-  list-style-type: none; /* 去掉默认的列表样式 */
-  padding-left: 20px; /* 增加缩进，区分层级 */
-  margin: 0; /* 去掉默认的外边距 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', 'Signika Negative', sans-serif;
 }
 
 li {
-  padding: 5px 0; /* 增加上下间距，使得项目之间有间隔 */
-  position: relative; /* 设置相对定位，以便添加自定义的层级指示符 */
-  font-family: Montserrat, "Signika Negative", sans-serif;
+  position: relative;
+  padding: 12px;
+  /* margin: 5px 0; */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* 禁止文本换行 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  overflow: hidden; /* 超出部分隐藏 */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 li::before {
-  content: ""; /* 伪元素，用于自定义列表样式 */
+  content: "";
   position: absolute;
-  left: -16px; /* 伪元素的位置 */
-  top: 10px; /* 伪元素的垂直位置 */
-  width: 10px; /* 伪元素的宽度 */
-  height: 10px; /* 伪元素的高度 */
-  background-color: #007bff; /* 使用蓝色圆点表示文件 */
-  border-radius: 50%; /* 圆形 */
+  left: -20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #007bff; /* 蓝色圆点 */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 li ul li::before {
-  background-color: #28a745; /* 使用绿色圆点表示子文件或子文件夹 */
+  background: #28a745; /* 绿色圆点 */
 }
 
 ul ul ul li::before {
-  background-color: #ffc107; /* 使用黄色圆点表示更深层级的文件 */
+  background: #ffc107; /* 黄色圆点 */
 }
 
 li ul {
-  border-left: 2px dashed #007bff; /* 添加虚线以可视化层级 */
-  margin-left: 10px; /* 子级的进一步缩进 */
-  padding-left: 10px; /* 子级的进一步缩进 */
+  border-left: 3px solid #007bff; /* 蓝色虚线 */
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 li ul ul {
-  border-left: 2px dashed #28a745; /* 子级文件夹的虚线颜色 */
+  border-left: 3px solid #28a745; /* 绿色虚线 */
 }
 
 li ul ul ul {
-  border-left: 2px dashed #ffc107; /* 更深层级的虚线颜色 */
+  border-left: 3px solid #ffc107; /* 黄色虚线 */
+}
+
+li:hover::before {
+  background: #fff; /* 悬停时圆点变为白色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 强化圆点阴影 */
 }
 
 li[data-path] {
@@ -163,12 +173,16 @@ li[data-path] {
 }
 
 li.active {
-  color: #3ff23f;
+  background: #343a40; /* 活动项背景颜色为深灰色 */
+  color: #3ff23f; /* 活动项文本颜色为绿色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 li.active::before {
-  background-color: #3ff23f; /* 活动项的伪元素颜色 */
+  background: #3ff23f; /* 活动项圆点颜色为绿色 */
 }
+
+/* 2 */
 
 .monaco-editor,
 .monaco-editor-background,
