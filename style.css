@@ -77,19 +77,6 @@ body {
   transform: translateY(-50%);
 }
 
-.open_file {
-  width: 90%;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  background-color: hsl(0, 0%, 18%);
-  border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 20px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 .hljs-tag .hljs-attr,
 .hljs-tag .hljs-name {
   color: #f2f2f2;
@@ -111,7 +98,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", "Signika Negative", sans-serif;
+  font-family: "consolas", "Signika Negative", sans-serif;
 }
 
 .wrapper__list li {
@@ -125,6 +112,7 @@ body {
   text-overflow: ellipsis; /* 超出部分显示省略号 */
   overflow: hidden; /* 超出部分隐藏 */
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  font-size: 1.05em;
 }
 
 .wrapper__list li::before {
@@ -205,8 +193,6 @@ body {
 .wrapper__content code[class*="language-"] {
   background: initial;
   box-shadow: initial;
-  font-family: var(--ff);
-  font-size: var(--fs01);
   font-style: italic;
   line-height: 2;
 }
@@ -262,7 +248,7 @@ body {
 .wrapper__content p code,
 .wrapper__content li code {
   color: #3ff23f;
-  font-family: "Montserrat", "Signika Negative", sans-serif;
+  font-family: "consolas", "Signika Negative", sans-serif;
   padding: 0 5px;
   font-weight: 500;
 }
@@ -337,7 +323,7 @@ body {
 
 .mdClass > * {
   font-size: 0.94em;
-  font-family: "Montserrat", "Signika Negative", sans-serif;
+  font-family: "consolas", "Signika Negative", sans-serif;
 }
 /* 3 */
 
