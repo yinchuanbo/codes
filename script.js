@@ -8,6 +8,8 @@ const wrapperList = document.querySelector(".wrapper__list");
 const topEx = document.querySelector(".wrapper__top_ex");
 let isEx = false;
 
+let imgArr = ["jpg", "jpeg", "png", "gif", "bmp", "webp", "svg"];
+
 let editor = null;
 
 function getDataByPath(data, path) {
@@ -32,7 +34,6 @@ function decodeHtmlEntities(encodedString) {
 }
 
 function init(obj, extension) {
-  console.log("extension", extension);
   obj = decodeHtmlEntities(obj);
   if (editor) editor.dispose();
   wrapperContent.innerHTML = "";
@@ -75,16 +76,14 @@ window.onload = () => {
     const path = firstPath.dataset.path;
     if (path) {
       const { data: obj, extension } = getDataByPath(data, path);
-      if (
-        !["jpg", "jpeg", "png", "gif", "bmp", "webp", "svg"].includes(extension)
-      ) {
+      if (!imgArr.includes(extension)) {
         init(obj, extension);
-        // let html = hljs.highlight(obj, { language: extension }).value;
-        // if (extension === "html") html = decodeHtmlEntities(html);
-        // wrapperContent.innerHTML = html;
       } else {
         wrapperContent.innerHTML = "";
-        wrapperContent.insertAdjacentHTML("beforeend", `<img src="${obj}" />`);
+        wrapperContent.insertAdjacentHTML(
+          "beforeend",
+          `<img src="${obj}" style="margin-bottom: 0!important" />`
+        );
       }
     }
   }
@@ -95,17 +94,13 @@ window.onload = () => {
       if (path) {
         curActive.classList.remove("active");
         const { data: obj, extension } = getDataByPath(data, path);
-        if (
-          !["jpg", "jpeg", "png", "gif", "bmp", "webp", "svg"].includes(
-            extension
-          )
-        ) {
+        if (!imgArr.includes(extension)) {
           init(obj, extension);
         } else {
           wrapperContent.innerHTML = "";
           wrapperContent.insertAdjacentHTML(
             "beforeend",
-            `<img src="${obj}" />`
+            `<img src="${obj}" style="margin-bottom: 0!important" />`
           );
         }
         item.classList.add("active");
