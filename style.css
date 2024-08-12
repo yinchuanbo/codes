@@ -112,7 +112,6 @@ body {
   text-overflow: ellipsis; /* 超出部分显示省略号 */
   overflow: hidden; /* 超出部分隐藏 */
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  font-size: 1.05em;
 }
 
 .wrapper__list li::before {
