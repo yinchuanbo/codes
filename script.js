@@ -36,10 +36,10 @@ function init(obj, extension) {
   obj = decodeHtmlEntities(obj);
   if (editor) editor.dispose();
   wrapperContent.innerHTML = "";
-  wrapperContent.classList.remove('mdClass')
+  wrapperContent.classList.remove("mdClass");
   if (extension === "md") {
     wrapperContent.innerHTML = obj;
-    wrapperContent.classList.add('mdClass')
+    wrapperContent.classList.add("mdClass");
   } else {
     require.config({
       paths: {
@@ -60,9 +60,9 @@ function init(obj, extension) {
         },
         lineNumbers: true,
         lineHeight: 40,
-        // minimap: {
-        //   enabled: false, // 禁用缩略图
-        // }
+        minimap: {
+          enabled: false,
+        },
       });
     });
   }

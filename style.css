@@ -50,15 +50,11 @@ body {
 
 .wrapper__list {
   width: fit-content;
-  min-width: 250px;
+  min-width: 240px;
   height: 100%;
   overflow: auto;
-  padding: 5px 5px;
-  background-color: #1a1a1a;
-  /* position: fixed;
-  top: 50px;
-  left: 0px;
-  z-index: 100; */
+  padding: 10px;
+  border-right: 3px solid #292929;
 }
 
 .wrapper__content {
@@ -339,7 +335,7 @@ body {
 }
 
 .mdClass > * {
-  font-size: 0.95em;
+  font-size: 0.94em;
   font-family: "Montserrat", "Signika Negative", sans-serif;
 }
 /* 3 */
