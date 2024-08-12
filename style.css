@@ -103,8 +103,7 @@ body {
 
 .wrapper__list li {
   position: relative;
-  padding: 12px;
-  /* margin: 5px 0; */
+  padding: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
