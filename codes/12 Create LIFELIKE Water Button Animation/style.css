@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  width: 200px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+a span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  letter-spacing: 8px;
+  font-size: 19px;
+}
+
+.water {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+a:hover .water {
+  top: -120px;
+}
+
+.water::before,
+.water::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.water::before {
+  border-radius: 45%;
+  background-color: black;
+  animation: animate 5s linear infinite;
+}
+
+.water::after {
+  border-radius: 40%;
+  background-color: black;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
