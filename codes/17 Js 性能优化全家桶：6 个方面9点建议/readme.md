@@ -13,10 +13,6 @@
 })();
 ```
 
-JavaScript
-
-Copy
-
 ### 使用 WeakMap 进行缓存
 
 WeakMaps 允许在不阻止垃圾回收的情况下缓存对象。
@@ -37,10 +33,6 @@ function expensiveComputation(data) {
   return data * 2;
 }
 ```
-
-JavaScript
-
-Copy
 
 ## 🌐 用于离线缓存的 Service Worker
 
@@ -84,10 +76,6 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-JavaScript
-
-Copy
-
 ## 📊 用于性能密集型任务的 WebAssembly
 
 WebAssembly（Wasm）使用二进制指令格式来执行高性能代码。
@@ -119,10 +107,6 @@ fetch('example.wasm').then(response =>
 });
 ```
 
-JavaScript
-
-Copy
-
 ## 🎛️ 用于多线程的 Web Worker
 
 Web Workers 允许在后台线程中运行脚本，在 JavaScript 中启用多线程。
@@ -153,10 +137,6 @@ worker.onmessage = (event) => {
 };
 ```
 
-JavaScript
-
-Copy
-
 ## 🚀 优化 React 应用程序
 
 React 以其强大的功能而著称，但在处理大型应用时可能会成为性能瓶颈。为了提供无缝的用户体验，对 React 性能的优化变得尤为关键。
@@ -172,10 +152,6 @@ const ExpensiveComponent = React.memo(({ data }) => {
 });
 ```
 
-React JSX
-
-Copy
-
 对于开销大的计算，那就得交给 useMemo 了。
 
 ```jsx
@@ -186,10 +162,6 @@ const MyComponent = ({ items }) => {
   return <div>Total: {total}</div>;
 };
 ```
-
-React JSX
-
-Copy
 
 ### 使用 React.lazy 和 Suspense 进行代码拆分
 
@@ -204,10 +176,6 @@ const MyComponent = () => (
 );
 ```
 
-React JSX
-
-Copy
-
 ## ⚙️ 使用高效的数据结构
 
 选择合适的数据结构会对性能产生重大影响。
@@ -221,10 +189,6 @@ const map = new Map();
 map.set("key1", "value1");
 console.log(map.get("key1")); // value1
 ```
-
-JavaScript
-
-Copy
 
 ### 使用 set 快速存储唯一值
 

@@ -33,14 +33,53 @@ function decodeHtmlEntities(encodedString) {
   return textarea.value;
 }
 
+const loadCSS = (url) => {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = url;
+  document.head.appendChild(link);
+};
+
+const loadJS = (url, callback) => {
+  const script = document.createElement("script");
+  script.src = url;
+  script.onload = callback;
+  document.body.appendChild(script);
+};
+
+const removeCSS = (filename) => {
+  const links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach((link) => {
+    if (link.href.includes(filename)) {
+      link.parentNode.removeChild(link);
+    }
+  });
+};
+
+// Function to remove loaded JS file
+const removeJS = (filename) => {
+  const scripts = document.querySelectorAll("script");
+  scripts.forEach((script) => {
+    if (script.src.includes(filename)) {
+      script.parentNode.removeChild(script);
+    }
+  });
+};
+
 function init(obj, extension) {
   obj = decodeHtmlEntities(obj);
   if (editor) editor.dispose();
   wrapperContent.innerHTML = "";
   wrapperContent.classList.remove("mdClass");
+  removeCSS("prism.css");
+  removeJS("prism.min.js");
   if (extension === "md") {
     wrapperContent.innerHTML = obj;
     wrapperContent.classList.add("mdClass");
+    loadCSS("prism.css");
+    loadJS("prism.min.js", () => {
+      console.log("Prism.js has been loaded");
+    });
   } else {
     require.config({
       paths: {
@@ -48,13 +87,30 @@ function init(obj, extension) {
       },
     });
     require(["vs/editor/editor.main"], function () {
+      monaco.editor.defineTheme("myCustomTheme", {
+        base: "hc-black", // 基础主题: 'vs', 'vs-dark', 'hc-black'
+        inherit: true,
+        rules: [
+          { token: "comment", foreground: "999999", fontStyle: "italic" },
+        ],
+        colors: {
+          "editor.foreground": "#D4D4D4",
+          "editor.selectionBackground": "#264F78",
+          "editor.lineHighlightBackground": "#242424",
+          "editor.inactiveSelectionBackground": "#3B3A30",
+          "editorIndentGuide.background": "#2A2D2E",
+          "editorIndentGuide.activeBackground": "#2A2D2E",
+        },
+      });
+
+      monaco.editor.setTheme("myCustomTheme");
       editor = monaco.editor.create(wrapperContent, {
         value: obj,
         language: extension === "js" ? "javascript" : extension,
         automaticLayout: true,
-        theme: "hc-black",
-        fontSize: 18,
-        fontFamily: "Kanit",
+        theme: "myCustomTheme",
+        fontSize: 16,
+        fontFamily: "hack, Kanit",
         scrollbar: {
           vertical: "hidden",
           horizontal: "hidden",
@@ -107,7 +163,9 @@ window.onload = () => {
       }
     };
   });
-  topEx.onclick = () => {
-    wrapperList.classList.toggle("isshow");
-  };
+  if (topEx) {
+    topEx.onclick = () => {
+      wrapperList.classList.toggle("isshow");
+    };
+  }
 };

@@ -114,13 +114,15 @@ function convertToHTML(structure, parentPath = "") {
 let urls = [];
 
 for (const key in structure) {
+  const len = Object.keys(structure[key]).length;
   const hasHtml = !!structure[key]['index.html']
   const tempHTML = ejs.render(templateContent, {
     content: convertToHTML(structure[key]),
     datas: structure[key],
     key,
     preview: `/codes/${key}`,
-    hasHtml
+    hasHtml,
+    len
   });
   const sanitizedKey = key.replace(/\s+/g, "_");
   const htmlName = `${sanitizedKey}.html`;
