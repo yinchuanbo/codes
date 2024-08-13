@@ -7,6 +7,10 @@
   color: #fff;
 }
 
+:root {
+  --ff: Kanit;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -99,7 +103,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: "Kanit", "Signika Negative", sans-serif;
+  font-family: var(--ff);
 }
 
 .wrapper__list li {
@@ -247,7 +251,7 @@ body {
 .wrapper__content p code,
 .wrapper__content li code {
   color: #3ff23f;
-  font-family: "Kanit", "Signika Negative", sans-serif;
+  font-family: var(--ff);
   padding: 0 5px;
   font-weight: 500;
 }
@@ -322,7 +326,7 @@ body {
 
 .mdClass > * {
   font-size: 0.94em;
-  font-family: "Kanit", "Signika Negative", sans-serif;
+  font-family: var(--ff);
 }
 /* 3 */
 
