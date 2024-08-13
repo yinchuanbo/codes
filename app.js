@@ -43,7 +43,6 @@ function svgToBase64(svgString) {
 function getDirectoryStructure(dirPath) {
   const result = {};
 
-  // Read all items in the directory
   const items = fs.readdirSync(dirPath);
 
   items.forEach((item) => {
@@ -115,11 +114,13 @@ function convertToHTML(structure, parentPath = "") {
 let urls = [];
 
 for (const key in structure) {
+  const hasHtml = !!structure[key]['index.html']
   const tempHTML = ejs.render(templateContent, {
     content: convertToHTML(structure[key]),
     datas: structure[key],
     key,
     preview: `/codes/${key}`,
+    hasHtml
   });
   const sanitizedKey = key.replace(/\s+/g, "_");
   const htmlName = `${sanitizedKey}.html`;

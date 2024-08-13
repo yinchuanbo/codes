@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="code-square-o.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -55,6 +57,8 @@
             ></path>
           </svg>
         </button>
+
+        
         <a class="wrapper__top_preview" href="/codes/15 Amazing 3D Animation" target="_blank">
           <svg
             t="1723292839956"
@@ -78,6 +82,7 @@
             ></path>
           </svg>
         </a>
+        
       </div>
       <div class="wrapper__list"><ul><li data-id="56" data-path="index.html">index.html</li><li data-id="57" data-path="style.css">style.css</li></ul></div>
       <div class="wrapper__content"></div>
@@ -88,6 +93,7 @@
   &#34;style.css&#34;: &#34;* {\r\n  padding: 0;\r\n  margin: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 100vh;\r\n  background-color: #0d0c0c;\r\n  overflow: hidden;\r\n}\r\n\r\n.bowl {\r\n  position: absolute;\r\n  width: 300px;\r\n  height: 300px;\r\n  background: rgba(255, 255, 255, 0.1);\r\n  border-radius: 50%;\r\n  border: 8px solid transparent;\r\n  transform-origin: bottom center;\r\n  animation: move 5s linear infinite;\r\n}\r\n\r\n@keyframes move {\r\n  25% {\r\n    transform: rotate(22deg);\r\n  }\r\n  50% {\r\n    transform: rotate(0);\r\n  }\r\n  75% {\r\n    transform: rotate(-22deg);\r\n  }\r\n  100% {\r\n    filter: hue-rotate(360deg);\r\n  }\r\n}\r\n\r\n.bowl::before {\r\n  content: \&#34;\&#34;;\r\n  position: absolute;\r\n  top: -15px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  width: 40%;\r\n  height: 30px;\r\n  border: 15px solid #444;\r\n  border-radius: 50%;\r\n  box-shadow: 0 10px #222;\r\n}\r\n\r\n.bowl::after {\r\n  content: \&#34;\&#34;;\r\n  position: absolute;\r\n  top: 35%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  border-radius: 50%;\r\n  width: 150px;\r\n  height: 60px;\r\n  background-color: rgba(255, 255, 255, 0.05);\r\n}\r\n\r\n.liquid {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 5px;\r\n  right: 5px;\r\n  bottom: 5px;\r\n  background-color: #1ae907;\r\n  border-bottom-left-radius: 150px;\r\n  border-bottom-right-radius: 150px;\r\n  filter: drop-shadow(0 0 80px #1ae907);\r\n  transform-origin: top center;\r\n  animation: liquid 5s linear infinite;\r\n}\r\n\r\n@keyframes liquid {\r\n  0% {\r\n    transform: rotate(0);\r\n  }\r\n  25% {\r\n    transform: rotate(-22deg);\r\n  }\r\n  30% {\r\n    transform: rotate(-23deg);\r\n  }\r\n  50% {\r\n    transform: rotate(0);\r\n  }\r\n  75% {\r\n    transform: rotate(22deg);\r\n  }\r\n  80% {\r\n    transform: rotate(23deg);\r\n  }\r\n  100% {\r\n    transform: rotate(0);\r\n  }\r\n}\r\n\r\n.liquid::before {\r\n  content: \&#34;\&#34;;\r\n  position: absolute;\r\n  top: -10px;\r\n  width: 100%;\r\n  height: 20px;\r\n  background-color: #15be05;\r\n  border-radius: 50%;\r\n  filter: drop-shadow(0 0 80px #15be05);\r\n}\r\n\r\n.shadow {\r\n  position: absolute;\r\n  top: calc(50% + 150px);\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  width: 260px;\r\n  height: 40px;\r\n  background: rgba(0, 0, 0, 0.5);\r\n  border-radius: 50%;\r\n  animation: shadow 5s linear infinite;\r\n}\r\n\r\n@keyframes shadow {\r\n  0% {\r\n    left: 50%;\r\n    width: 260px;\r\n    height: 40px;\r\n    top: calc(50% + 150px);\r\n  }\r\n  25% {\r\n    left: 55%;\r\n    width: 265px;\r\n    height: 30px;\r\n    top: calc(50% + 130px);\r\n  }\r\n  50% {\r\n    left: 50%;\r\n    width: 260px;\r\n    height: 40px;\r\n    top: calc(50% + 150px);\r\n  }\r\n  75% {\r\n    left: 45%;\r\n    width: 265px;\r\n    height: 30px;\r\n    top: calc(50% + 130px);\r\n  }\r\n}\r\n&#34;
 }</pre
     >
+    <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
     <script src="script.js"></script>
   </body>

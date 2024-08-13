@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="code-square-o.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -55,6 +57,8 @@
             ></path>
           </svg>
         </button>
+
+        
         <a class="wrapper__top_preview" href="/codes/02 Responsive Website Layout with Animated Background" target="_blank">
           <svg
             t="1723292839956"
@@ -78,6 +82,7 @@
             ></path>
           </svg>
         </a>
+        
       </div>
       <div class="wrapper__list"><ul><li data-id="21" data-path="index.html">index.html</li><li data-id="22" data-path="logo.png">logo.png</li><li data-id="23" data-path="style.css">style.css</li></ul></div>
       <div class="wrapper__content"></div>
@@ -89,6 +94,7 @@
   &#34;style.css&#34;: &#34;* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  font-family: montserrat;\r\n}\r\n\r\n:root {\r\n  --white: #fff;\r\n  --yellow: #fcc220;\r\n  --black: #20374b;\r\n}\r\n\r\n.header {\r\n  background: var(--black);\r\n  min-height: 100vh;\r\n  min-height: 100dvh;\r\n}\r\n\r\nnav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 20px 100px;\r\n}\r\n\r\n.logo {\r\n  padding: 0 15px;\r\n}\r\n\r\n.logo img {\r\n  border-radius: 100%;\r\n}\r\n\r\n.menu ul li {\r\n  display: inline-block;\r\n  margin: 0 15px;\r\n}\r\n\r\n.menu ul li a {\r\n  cursor: pointer;\r\n  font-weight: 700;\r\n  font-size: 18px;\r\n  text-transform: uppercase;\r\n  color: var(--white);\r\n  padding: 5px 15px;\r\n  transition: all 0.6s;\r\n}\r\n\r\n.menu ul li a:hover {\r\n  background-color: var(--yellow);\r\n  border-radius: 50px;\r\n  color: var(--black);\r\n}\r\n\r\n.banner {\r\n  padding: 0 10%;\r\n  height: 80vh;\r\n  display: flex;\r\n  justify-content: center;\r\n  text-align: center;\r\n  align-items: center;\r\n  color: var(--white);\r\n  background: var(--black);\r\n}\r\n\r\n.banner h1 {\r\n  font-size: 50px;\r\n  margin: 0;\r\n}\r\n\r\n.banner h1 span {\r\n  display: block;\r\n  color: var(--yellow);\r\n}\r\n\r\n.banner p {\r\n  margin: 15px 0 40px;\r\n}\r\n\r\n.banner button {\r\n  background-color: var(--yellow);\r\n  border: none;\r\n  outline: none;\r\n  color: var(--black);\r\n  padding: 10px 30px;\r\n  font-size: 20px;\r\n  border-radius: 50px;\r\n  display: inline-block;\r\n  border: 1px solid transparent;\r\n  transition: all 0.6s;\r\n}\r\n\r\n.banner button:hover {\r\n  transform: translateY(-6px);\r\n  border: 1px solid var(--white);\r\n  background: transparent;\r\n  color: var(--white);\r\n  font-weight: 700;\r\n  cursor: pointer;\r\n}\r\n\r\n.wrapper span {\r\n  position: fixed;\r\n  bottom: -120px;\r\n  animation: animate 10s linear infinite;\r\n  z-index: 100;\r\n  width: 0;\r\n  height: 0;\r\n  border: 20px solid transparent;\r\n  border-bottom-color: rgba(254, 194, 35, 0.3);\r\n  transform: rotate(45deg);\r\n  margin: 50px;\r\n}\r\n\r\n.wrapper span:nth-child(1) {\r\n  left: 60px;\r\n  animation-delay: 0.6s;\r\n}\r\n\r\n.wrapper span:nth-child(2) {\r\n  left: 10%;\r\n  animation-delay: 3s;\r\n}\r\n\r\n.wrapper span:nth-child(3) {\r\n  left: 20%;\r\n  animation-delay: 2s;\r\n}\r\n\r\n.wrapper span:nth-child(4) {\r\n  left: 30%;\r\n  animation-delay: 5s;\r\n}\r\n\r\n.wrapper span:nth-child(5) {\r\n  left: 40%;\r\n  animation-delay: 1s;\r\n}\r\n\r\n.wrapper span:nth-child(6) {\r\n  left: 50%;\r\n  animation-delay: 7s;\r\n}\r\n\r\n.wrapper span:nth-child(7) {\r\n  left: 60%;\r\n  animation-delay: 6s;\r\n}\r\n\r\n.wrapper span:nth-child(8) {\r\n  left: 70%;\r\n  animation-delay: 8s;\r\n}\r\n\r\n.wrapper span:nth-child(9) {\r\n  left: 80%;\r\n  animation-delay: 6s;\r\n}\r\n\r\n.wrapper span:nth-child(10) {\r\n  left: 90%;\r\n  animation-delay: 4s;\r\n}\r\n\r\n@keyframes animate {\r\n  0% {\r\n    transform: translateY(0);\r\n    opacity: 1;\r\n  }\r\n  70% {\r\n    opacity: 0.8;\r\n  }\r\n  100% {\r\n    transform: translateY(-800px) rotate(360deg);\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@media (max-width: 1000px) {\r\n  nav {\r\n    flex-direction: column;\r\n  }\r\n  .menu ul {\r\n    padding: 0;\r\n  }\r\n  .menu ul li {\r\n    margin: 0 15px 0 0;\r\n  }\r\n  .banner {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  .banner h1 {\r\n    font-size: 40px;\r\n  }\r\n}\r\n\r\n@media (max-width: 600px) {\r\n  .logo {\r\n    margin-top: 0;\r\n  }\r\n  nav {\r\n    padding: 15px;\r\n  }\r\n  .menu ul li a {\r\n    font-size: 10px;\r\n    padding: 5px;\r\n  }\r\n  .banner {\r\n    text-align: center;\r\n  }\r\n  .banner h1 {\r\n    font-size: 18px;\r\n  }\r\n  .banner p {\r\n    margin: 15px 0;\r\n    font-size: 11px;\r\n  }\r\n  .banner button {\r\n    font-size: 12px;\r\n  }\r\n}\r\n&#34;
 }</pre
     >
+    <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
     <script src="script.js"></script>
   </body>

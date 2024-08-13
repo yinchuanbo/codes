@@ -322,10 +322,20 @@ body {
 .mdClass {
   padding: 20px;
   white-space: normal;
+  overflow: auto;
 }
 
 .mdClass > * {
   font-size: 0.94em;
+  font-family: var(--ff);
+}
+
+.mdClass pre {
+  background-color: #292929;
+  padding: 10px 15px;
+}
+
+.mdClass pre code {
   font-family: var(--ff);
 }
 /* 3 */

@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="code-square-o.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -55,6 +57,8 @@
             ></path>
           </svg>
         </button>
+
+        
         <a class="wrapper__top_preview" href="/codes/07 Create an Image Slider" target="_blank">
           <svg
             t="1723292839956"
@@ -78,6 +82,7 @@
             ></path>
           </svg>
         </a>
+        
       </div>
       <div class="wrapper__list"><ul><li data-id="31" data-path="index.html">index.html</li><li data-id="32" data-path="script.js">script.js</li><li data-id="33" data-path="style.css">style.css</li></ul></div>
       <div class="wrapper__content"></div>
@@ -89,6 +94,7 @@
   &#34;style.css&#34;: &#34;* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: #eaeaea;\r\n  overflow: hidden;\r\n}\r\n\r\n.container {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  width: 1000px;\r\n  height: 600px;\r\n  background: #f5f5f5;\r\n  box-shadow: 0 30px 50px #dbdbdb;\r\n}\r\n\r\n.container .slide .item {\r\n  width: 200px;\r\n  height: 300px;\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translate(0, -50%);\r\n  border-radius: 20px;\r\n  box-shadow: 0 30px 50px #505050;\r\n  background-position: 50% 50%;\r\n  background-size: cover;\r\n  display: inline-block;\r\n  transition: 0.5s;\r\n}\r\n\r\n.slide .item:nth-child(1),\r\n.slide .item:nth-child(2) {\r\n  top: 0;\r\n  left: 0;\r\n  transform: translate(0, 0);\r\n  border-radius: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.slide .item:nth-child(3) {\r\n  left: 50%;\r\n}\r\n.slide .item:nth-child(4) {\r\n  left: calc(50% + 220px);\r\n}\r\n.slide .item:nth-child(5) {\r\n  left: calc(50% + 440px);\r\n}\r\n\r\n/* here n = 0, 1, 2, 3,... */\r\n.slide .item:nth-child(n + 6) {\r\n  left: calc(50% + 660px);\r\n  opacity: 0;\r\n}\r\n\r\n.item .content {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 100px;\r\n  width: 300px;\r\n  text-align: left;\r\n  color: #eee;\r\n  transform: translate(0, -50%);\r\n  font-family: system-ui;\r\n  display: none;\r\n}\r\n\r\n.slide .item:nth-child(2) .content {\r\n  display: block;\r\n}\r\n\r\n.content .name {\r\n  font-size: 40px;\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n  opacity: 0;\r\n  animation: animate 1s ease-in-out 1 forwards;\r\n}\r\n\r\n.content .des {\r\n  margin-top: 10px;\r\n  margin-bottom: 20px;\r\n  opacity: 0;\r\n  animation: animate 1s ease-in-out 0.3s 1 forwards;\r\n}\r\n\r\n.content button {\r\n  padding: 10px 20px;\r\n  border: none;\r\n  cursor: pointer;\r\n  opacity: 0;\r\n  animation: animate 1s ease-in-out 0.6s 1 forwards;\r\n}\r\n\r\n@keyframes animate {\r\n  from {\r\n    opacity: 0;\r\n    transform: translate(0, 100px);\r\n    filter: blur(33px);\r\n  }\r\n\r\n  to {\r\n    opacity: 1;\r\n    transform: translate(0);\r\n    filter: blur(0);\r\n  }\r\n}\r\n\r\n.button {\r\n  width: 100%;\r\n  text-align: center;\r\n  position: absolute;\r\n  bottom: 20px;\r\n}\r\n\r\n.button button {\r\n  width: 40px;\r\n  height: 35px;\r\n  border-radius: 8px;\r\n  cursor: pointer;\r\n  margin: 0 5px;\r\n  border: 1px solid #000;\r\n  transition: 0.3s;\r\n}\r\n\r\n.button button:hover {\r\n  background: #ababab;\r\n  color: #fff;\r\n}\r\n&#34;
 }</pre
     >
+    <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
     <script src="script.js"></script>
   </body>

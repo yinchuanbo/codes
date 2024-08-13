@@ -55,6 +55,8 @@
             ></path>
           </svg>
         </button>
+
+        <% if (hasHtml) { %>
         <a class="wrapper__top_preview" href="<%- preview %>" target="_blank">
           <svg
             t="1723292839956"
@@ -78,6 +80,7 @@
             ></path>
           </svg>
         </a>
+        <% } %>
       </div>
       <div class="wrapper__list"><%- content %></div>
       <div class="wrapper__content"></div>
