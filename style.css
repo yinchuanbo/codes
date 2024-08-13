@@ -99,7 +99,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: "consolas", "Signika Negative", sans-serif;
+  font-family: "Kanit", "Signika Negative", sans-serif;
 }
 
 .wrapper__list li {
@@ -247,7 +247,7 @@ body {
 .wrapper__content p code,
 .wrapper__content li code {
   color: #3ff23f;
-  font-family: "consolas", "Signika Negative", sans-serif;
+  font-family: "Kanit", "Signika Negative", sans-serif;
   padding: 0 5px;
   font-weight: 500;
 }
@@ -322,7 +322,7 @@ body {
 
 .mdClass > * {
   font-size: 0.94em;
-  font-family: "consolas", "Signika Negative", sans-serif;
+  font-family: "Kanit", "Signika Negative", sans-serif;
 }
 /* 3 */
 

@@ -53,8 +53,8 @@ function init(obj, extension) {
         language: extension === "js" ? "javascript" : extension,
         automaticLayout: true,
         theme: "hc-black",
-        fontSize: 16,
-        fontFamily: "consolas",
+        fontSize: 18,
+        fontFamily: "Kanit",
         scrollbar: {
           vertical: "hidden",
           horizontal: "hidden",
