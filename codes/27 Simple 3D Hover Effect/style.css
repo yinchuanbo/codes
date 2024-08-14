@@ -15,6 +15,7 @@ body {
 
 body {
   background: linear-gradient(90deg, black, #333);
+  overflow: hidden;
 }
 
 .wrapper {
