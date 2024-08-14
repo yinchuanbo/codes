@@ -30,17 +30,19 @@ body {
 
 body {
   background-color: rgb(24, 24, 24);
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 ul {
   width: 100%;
   height: fit-content;
   display: grid;
-  grid-template-columns: repeat(4, 300px);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
   place-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 ul li {
