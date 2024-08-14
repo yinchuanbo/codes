@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#box {
+  background-image: url("https://img.zjjcts.com/uploadimg/image/20200521/20200521163235_89152.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 0 5px blue;
+}
+
+body {
+  background-color: #333;
+}
