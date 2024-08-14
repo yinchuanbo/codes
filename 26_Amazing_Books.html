@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24 伪元素实现边界智能判断移动</title>
+    <title>26 Amazing Books</title>
     <link rel="shortcut icon" href="code-square-o.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
   <body>
     <div class="wrapper">
       <div class="wrapper__top">
-        <div class="wrapper__top_main">24 伪元素实现边界智能判断移动</div>
+        <div class="wrapper__top_main">26 Amazing Books</div>
       </div>
       <div class="wrapper__list isshow">
         <div class="wrapper__list_bar">
@@ -62,7 +62,7 @@
           </button>
           
           
-          <a class="wrapper__top_preview" href="/codes/24 伪元素实现边界智能判断移动" target="_blank">
+          <a class="wrapper__top_preview" href="/codes/26 Amazing Books" target="_blank">
             <svg
               t="1723292839956"
               class="icon"
@@ -87,14 +87,14 @@
           </a>
           
         </div>
-        <ul><li data-id="78" data-path="index.html">index.html</li><li data-id="79" data-path="style.css">style.css</li></ul>
+        <ul><li data-id="82" data-path="index.html">index.html</li><li data-id="83" data-path="style.css">style.css</li></ul>
       </div>
       <div class="wrapper__content"></div>
     </div>
     <pre id="pre" style="display: none">
 {
-  &#34;index.html&#34;: &#34;&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\&#34;en\&#34;&gt;\r\n  &lt;head&gt;\r\n    &lt;meta charset=\&#34;UTF-8\&#34; /&gt;\r\n    &lt;meta name=\&#34;viewport\&#34; content=\&#34;width=device-width, initial-scale=1.0\&#34; /&gt;\r\n    &lt;title&gt;Document&lt;/title&gt;\r\n    &lt;link rel=\&#34;stylesheet\&#34; href=\&#34;/codes/24 伪元素实现边界智能判断移动/style.css\&#34; /&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;div class=\&#34;box\&#34;&gt;\r\n      &lt;div class=\&#34;box__right\&#34;&gt;Right → Left&lt;/div&gt;\r\n      &lt;div class=\&#34;box__left\&#34;&gt;Left → Right&lt;/div&gt;\r\n      &lt;div class=\&#34;box__top\&#34;&gt;Top → Bottom&lt;/div&gt;\r\n      &lt;div class=\&#34;box__bottom\&#34;&gt;Bottom → Top&lt;/div&gt;\r\n      &lt;div class=\&#34;box__center\&#34;&gt;Hover from any side&lt;/div&gt;\r\n    &lt;/div&gt;\r\n    &lt;script src=\&#34;/codes/24 伪元素实现边界智能判断移动/script.js\&#34;&gt;&lt;/script&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;\r\n&#34;,
-  &#34;style.css&#34;: &#34;* {\r\n  padding: 0;\r\n  margin: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #333;\r\n}\r\n\r\n.box {\r\n  position: relative;\r\n  width: 10em;\r\n  height: 10em;\r\n  line-height: 10em;\r\n  overflow: hidden;\r\n}\r\n\r\n.box__right,\r\n.box__left,\r\n.box__top,\r\n.box__bottom,\r\n.box__center {\r\n  position: absolute;\r\n  width: inherit;\r\n  height: inherit;\r\n  text-align: center;\r\n  line-height: inherit;\r\n  transition: transform 0.4s ease;\r\n}\r\n\r\n.box__right:before,\r\n.box__left:before,\r\n.box__top:before,\r\n.box__bottom:before,\r\n.box__center:before {\r\n  position: absolute;\r\n  content: \&#34;\&#34;;\r\n  width: 70.71%;\r\n  height: 70.71%;\r\n  transform: rotate(45deg);\r\n}\r\n\r\n.box__right:hover,\r\n.box__left:hover,\r\n.box__top:hover,\r\n.box__bottom:hover,\r\n.box__center:hover {\r\n  transform: translateX(0);\r\n  z-index: 1;\r\n}\r\n\r\n.box__right:hover:before,\r\n.box__left:hover:before,\r\n.box__top:hover:before,\r\n.box__bottom:hover:before,\r\n.box__center:hover:before {\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: none;\r\n}\r\n\r\n.box__right {\r\n  background: blue;\r\n  transform: translateX(100%);\r\n}\r\n\r\n.box__right:before {\r\n  right: 100%;\r\n  bottom: 0;\r\n  transform-origin: 100% 100%;\r\n}\r\n\r\n.box__right:hover ~ .box__center {\r\n  transform: translateX(-100%);\r\n}\r\n\r\n.box__left {\r\n  background: green;\r\n  transform: translateX(-100%);\r\n}\r\n\r\n.box__left:before {\r\n  left: 100%;\r\n  transform-origin: 0 0;\r\n}\r\n\r\n.box__left:hover ~ .box__center {\r\n  transform: translateX(100%);\r\n}\r\n\r\n.box__top {\r\n  background: red;\r\n  transform: translateY(-100%);\r\n}\r\n\r\n.box__top:before {\r\n  top: 100%;\r\n  right: 0;\r\n  transform-origin: 100% 0;\r\n}\r\n\r\n.box__top:hover ~ .box__center {\r\n  transform: translateY(100%);\r\n}\r\n\r\n.box__bottom {\r\n  background: yellow;\r\n  transform: translateY(100%);\r\n}\r\n\r\n.box__bottom:before {\r\n  bottom: 100%;\r\n  left: 0;\r\n  transform-origin: 0 100%;\r\n}\r\n\r\n.box__bottom:hover ~ .box__center {\r\n  transform: translateY(-100%);\r\n}\r\n\r\n.box__center {\r\n  background: orange;\r\n  z-index: -1;\r\n}\r\n&#34;
+  &#34;index.html&#34;: &#34;&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\&#34;en\&#34;&gt;\r\n  &lt;head&gt;\r\n    &lt;meta charset=\&#34;UTF-8\&#34; /&gt;\r\n    &lt;meta name=\&#34;viewport\&#34; content=\&#34;width=device-width, initial-scale=1.0\&#34; /&gt;\r\n    &lt;title&gt;Document&lt;/title&gt;\r\n    &lt;link rel=\&#34;stylesheet\&#34; href=\&#34;/codes/26 Amazing Books/style.css\&#34; /&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;div class=\&#34;book\&#34; style=\&#34;--clr: #f33139\&#34;&gt;&lt;/div&gt;\r\n    &lt;div class=\&#34;book\&#34; style=\&#34;--clr: #003bfe\&#34;&gt;&lt;/div&gt;\r\n    &lt;div class=\&#34;book\&#34; style=\&#34;--clr: #8701f4\&#34;&gt;&lt;/div&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;\r\n&#34;,
+  &#34;style.css&#34;: &#34;* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  background-color: #ffc967;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n*::before,\r\n*::after {\r\n  content: \&#34;\&#34;;\r\n  position: absolute;\r\n}\r\n\r\n.book {\r\n  position: relative;\r\n  width: 280px;\r\n  height: 420px;\r\n  background: var(--clr);\r\n  border-radius: 20px 16px 12px 32px;\r\n  background-image: linear-gradient(\r\n    to right,\r\n    var(--clr) 48px,\r\n    var(--clr) 50px,\r\n    transparent 50px\r\n  );\r\n  box-shadow: 2px 6px 40px 0 #fea600;\r\n  margin: 0 20px;\r\n}\r\n\r\n.book::after {\r\n  height: 52px;\r\n  width: 274px;\r\n  bottom: 6px;\r\n  right: 0;\r\n  background-color: #fff;\r\n  border-radius: 32px 4px 4px 32px;\r\n  box-shadow: inset 4px 6px 0 0 #e4e0ce;\r\n  background-image: linear-gradient(\r\n    to bottom,\r\n    transparent 6px,\r\n    #e4e0ce 8px,\r\n    transparent 8px,\r\n    transparent 12px,\r\n    #e4e0ce 12px,\r\n    transparent 14px,\r\n    transparent 18px,\r\n    #e4e0ce 18px,\r\n    transparent 20px,\r\n    transparent 24px,\r\n    #e4e0ce 24px,\r\n    transparent 26px,\r\n    transparent 30px,\r\n    #e4e0ce 30px,\r\n    transparent 32px,\r\n    transparent 36px,\r\n    #e4e0ce 36px,\r\n    transparent 38px,\r\n    transparent 42px,\r\n    #e4e0ce 42px,\r\n    transparent 44px,\r\n    transparent 48px,\r\n    #e4e0ce 48px,\r\n    transparent 50px\r\n  );\r\n}\r\n\r\n.book::before {\r\n  width: 160px;\r\n  height: 20px;\r\n  right: 40px;\r\n  top: 72px;\r\n  background-color: #e9e8e8;\r\n  border-radius: 20px;\r\n  box-shadow: 0 36px #e9e8e8;\r\n}\r\n&#34;
 }</pre
     >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>

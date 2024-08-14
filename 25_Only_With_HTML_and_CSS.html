@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24 伪元素实现边界智能判断移动</title>
+    <title>25 Only With HTML and CSS</title>
     <link rel="shortcut icon" href="code-square-o.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
   <body>
     <div class="wrapper">
       <div class="wrapper__top">
-        <div class="wrapper__top_main">24 伪元素实现边界智能判断移动</div>
+        <div class="wrapper__top_main">25 Only With HTML and CSS</div>
       </div>
       <div class="wrapper__list isshow">
         <div class="wrapper__list_bar">
@@ -62,7 +62,7 @@
           </button>
           
           
-          <a class="wrapper__top_preview" href="/codes/24 伪元素实现边界智能判断移动" target="_blank">
+          <a class="wrapper__top_preview" href="/codes/25 Only With HTML and CSS" target="_blank">
             <svg
               t="1723292839956"
               class="icon"
@@ -87,14 +87,14 @@
           </a>
           
         </div>
-        <ul><li data-id="78" data-path="index.html">index.html</li><li data-id="79" data-path="style.css">style.css</li></ul>
+        <ul><li data-id="80" data-path="index.html">index.html</li><li data-id="81" data-path="style.css">style.css</li></ul>
       </div>
       <div class="wrapper__content"></div>
     </div>
     <pre id="pre" style="display: none">
 {
-  &#34;index.html&#34;: &#34;&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\&#34;en\&#34;&gt;\r\n  &lt;head&gt;\r\n    &lt;meta charset=\&#34;UTF-8\&#34; /&gt;\r\n    &lt;meta name=\&#34;viewport\&#34; content=\&#34;width=device-width, initial-scale=1.0\&#34; /&gt;\r\n    &lt;title&gt;Document&lt;/title&gt;\r\n    &lt;link rel=\&#34;stylesheet\&#34; href=\&#34;/codes/24 伪元素实现边界智能判断移动/style.css\&#34; /&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;div class=\&#34;box\&#34;&gt;\r\n      &lt;div class=\&#34;box__right\&#34;&gt;Right → Left&lt;/div&gt;\r\n      &lt;div class=\&#34;box__left\&#34;&gt;Left → Right&lt;/div&gt;\r\n      &lt;div class=\&#34;box__top\&#34;&gt;Top → Bottom&lt;/div&gt;\r\n      &lt;div class=\&#34;box__bottom\&#34;&gt;Bottom → Top&lt;/div&gt;\r\n      &lt;div class=\&#34;box__center\&#34;&gt;Hover from any side&lt;/div&gt;\r\n    &lt;/div&gt;\r\n    &lt;script src=\&#34;/codes/24 伪元素实现边界智能判断移动/script.js\&#34;&gt;&lt;/script&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;\r\n&#34;,
-  &#34;style.css&#34;: &#34;* {\r\n  padding: 0;\r\n  margin: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #333;\r\n}\r\n\r\n.box {\r\n  position: relative;\r\n  width: 10em;\r\n  height: 10em;\r\n  line-height: 10em;\r\n  overflow: hidden;\r\n}\r\n\r\n.box__right,\r\n.box__left,\r\n.box__top,\r\n.box__bottom,\r\n.box__center {\r\n  position: absolute;\r\n  width: inherit;\r\n  height: inherit;\r\n  text-align: center;\r\n  line-height: inherit;\r\n  transition: transform 0.4s ease;\r\n}\r\n\r\n.box__right:before,\r\n.box__left:before,\r\n.box__top:before,\r\n.box__bottom:before,\r\n.box__center:before {\r\n  position: absolute;\r\n  content: \&#34;\&#34;;\r\n  width: 70.71%;\r\n  height: 70.71%;\r\n  transform: rotate(45deg);\r\n}\r\n\r\n.box__right:hover,\r\n.box__left:hover,\r\n.box__top:hover,\r\n.box__bottom:hover,\r\n.box__center:hover {\r\n  transform: translateX(0);\r\n  z-index: 1;\r\n}\r\n\r\n.box__right:hover:before,\r\n.box__left:hover:before,\r\n.box__top:hover:before,\r\n.box__bottom:hover:before,\r\n.box__center:hover:before {\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: none;\r\n}\r\n\r\n.box__right {\r\n  background: blue;\r\n  transform: translateX(100%);\r\n}\r\n\r\n.box__right:before {\r\n  right: 100%;\r\n  bottom: 0;\r\n  transform-origin: 100% 100%;\r\n}\r\n\r\n.box__right:hover ~ .box__center {\r\n  transform: translateX(-100%);\r\n}\r\n\r\n.box__left {\r\n  background: green;\r\n  transform: translateX(-100%);\r\n}\r\n\r\n.box__left:before {\r\n  left: 100%;\r\n  transform-origin: 0 0;\r\n}\r\n\r\n.box__left:hover ~ .box__center {\r\n  transform: translateX(100%);\r\n}\r\n\r\n.box__top {\r\n  background: red;\r\n  transform: translateY(-100%);\r\n}\r\n\r\n.box__top:before {\r\n  top: 100%;\r\n  right: 0;\r\n  transform-origin: 100% 0;\r\n}\r\n\r\n.box__top:hover ~ .box__center {\r\n  transform: translateY(100%);\r\n}\r\n\r\n.box__bottom {\r\n  background: yellow;\r\n  transform: translateY(100%);\r\n}\r\n\r\n.box__bottom:before {\r\n  bottom: 100%;\r\n  left: 0;\r\n  transform-origin: 0 100%;\r\n}\r\n\r\n.box__bottom:hover ~ .box__center {\r\n  transform: translateY(-100%);\r\n}\r\n\r\n.box__center {\r\n  background: orange;\r\n  z-index: -1;\r\n}\r\n&#34;
+  &#34;index.html&#34;: &#34;&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\&#34;en\&#34;&gt;\r\n  &lt;head&gt;\r\n    &lt;meta charset=\&#34;UTF-8\&#34; /&gt;\r\n    &lt;meta name=\&#34;viewport\&#34; content=\&#34;width=device-width, initial-scale=1.0\&#34; /&gt;\r\n    &lt;title&gt;Document&lt;/title&gt;\r\n    &lt;link rel=\&#34;stylesheet\&#34; href=\&#34;/codes/25 Only With HTML and CSS/style.css\&#34; /&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;div class=\&#34;center\&#34;&gt;\r\n      &lt;div class=\&#34;design\&#34;&gt;\r\n        &lt;div class=\&#34;circle-1 center color-border\&#34;&gt;\r\n          &lt;div class=\&#34;circle-2 center color-border\&#34;&gt;\r\n            &lt;div class=\&#34;circle-3 center color-border\&#34;&gt;\r\n              &lt;div class=\&#34;circle-4 center color-border\&#34;&gt;\r\n                &lt;div class=\&#34;circle-5\&#34;&gt;&lt;/div&gt;\r\n              &lt;/div&gt;\r\n            &lt;/div&gt;\r\n          &lt;/div&gt;\r\n        &lt;/div&gt;\r\n        &lt;div class=\&#34;mountain-1 shape shadow\&#34;&gt;&lt;/div&gt;\r\n        &lt;div class=\&#34;mountain-2 shape\&#34;&gt;&lt;/div&gt;\r\n        &lt;div class=\&#34;mountain-3 shape shadow\&#34;&gt;&lt;/div&gt;\r\n      &lt;/div&gt;\r\n    &lt;/div&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;\r\n&#34;,
+  &#34;style.css&#34;: &#34;* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  background-color: #212121;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.center {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.design {\r\n  height: 200px;\r\n  width: 200px;\r\n  border-radius: 40px;\r\n  background-color: rgb(255, 11, 0);\r\n  background: linear-gradient(\r\n    180deg,\r\n    rgba(255, 11, 0, 1) 13%,\r\n    rgba(255, 158, 0, 1) 100%\r\n  );\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.color-border {\r\n  border-radius: 50%;\r\n  background-color: #ffffff20;\r\n  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.circle-1 {\r\n  width: 220px;\r\n  height: 220px;\r\n  position: absolute;\r\n  right: -50px;\r\n  top: -50px;\r\n}\r\n\r\n.circle-2 {\r\n  width: 180px;\r\n  height: 180px;\r\n}\r\n\r\n.circle-3 {\r\n  width: 140px;\r\n  height: 140px;\r\n}\r\n\r\n.circle-5 {\r\n  width: 70px;\r\n  height: 70px;\r\n  background-color: #fff;\r\n  border-radius: 100%;\r\n}\r\n\r\n.shape {\r\n  width: 200px;\r\n  height: 200px;\r\n  background-color: #484848;\r\n  transform: rotate(45deg);\r\n  position: absolute;\r\n}\r\n\r\n.shadow {\r\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75);\r\n}\r\n\r\n.mountain-1 {\r\n  z-index: 1;\r\n  bottom: -100px;\r\n  left: -100px;\r\n}\r\n\r\n.mountain-2 {\r\n  bottom: -110px;\r\n  left: -30px;\r\n}\r\n\r\n.mountain-3 {\r\n  z-index: 2;\r\n  bottom: -150px;\r\n  left: 90px;\r\n}\r\n&#34;
 }</pre
     >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
