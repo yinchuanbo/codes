@@ -187,17 +187,17 @@ div.code-toolbar > .toolbar {
 }
 
 .wrapper__list li ul {
-  border-left: 3px solid #007bff; /* 蓝色虚线 */
+  border-left: 2px solid rgb(43, 43, 43); /* 蓝色虚线 */
   margin-left: 20px;
   padding-left: 20px;
 }
 
 .wrapper__list li ul ul {
-  border-left: 3px solid #28a745; /* 绿色虚线 */
+  border-left: 2px solid rgb(43, 43, 43); /* 绿色虚线 */
 }
 
 .wrapper__list li ul ul ul {
-  border-left: 3px solid #ffc107; /* 黄色虚线 */
+  border-left: 2px solid rgb(43, 43, 43); /* 黄色虚线 */
 }
 
 .wrapper__list li:hover::before {
