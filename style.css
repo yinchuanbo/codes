@@ -167,6 +167,13 @@ div.code-toolbar > .toolbar {
   transition: all 0.5s;
 }
 
+.wrapper__list li svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  margin-right: 3px;
+}
+
 .wrapper__list li::before {
   content: "";
   position: absolute;
